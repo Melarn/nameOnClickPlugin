@@ -1,4 +1,4 @@
-name: test
+name: GetPlayerName
 version: '${project.version}'
 main: me.melarn.untitled.Test
 api-version: '1.20'

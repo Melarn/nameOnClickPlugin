@@ -14,19 +14,11 @@ import org.bukkit.event.player.PlayerJoinEvent;
 public class HideNickName implements Listener {
 
     @EventHandler
-    public void onPlayerJoin(PlayerJoinEvent event) {
-        Player player = event.getPlayer();
-        player.setCustomNameVisible(true);
-    }
-
-    @EventHandler
     public void onPlayerInteract(PlayerInteractAtEntityEvent event) {
+        // Getting the target
         if (event.getRightClicked() instanceof Player) {
             Player player = (Player) event.getRightClicked();
             Player viewer = event.getPlayer();
-
-            // Hide the nickname above the player.
-            player.setDisplayName("");
 
             // Show the nickname in the ActionBar when the viewer presses RMB.
             viewer.sendActionBar("Player: " + player.getName());
