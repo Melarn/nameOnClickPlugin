@@ -1,0 +1,5 @@
+name: test
+version: '${project.version}'
+main: me.melarn.untitled.Test
+api-version: '1.20'
+authors: [melarn]
